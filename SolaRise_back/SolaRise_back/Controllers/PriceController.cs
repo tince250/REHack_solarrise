@@ -49,6 +49,24 @@ namespace SolaRise_back.Controllers
             return Ok(listOfPrices);
         }
 
+        [HttpGet]
+        [Route("getForBill/panel_id={panelId}&rails_id={railsId}&bill={bill}")]
+        public async Task<ActionResult<ListOfPricesDTO>> GetPriceForBill(int panelId, int railsId, decimal bill)
+        {
+
+            int numOfPanels = (int)Math.Ceiling(bill * 1000 / (decimal) 0.3 / (GetPanelPower(panelId) * (decimal)4.5 * 30));
+            ListOfPricesDTO listOfPrices = new ListOfPricesDTO();
+            listOfPrices.PanelPrice = GetPanelPrice(panelId);
+            listOfPrices.NumOfPanels = numOfPanels;
+            listOfPrices.InverterPrice = GetInverterPrice(panelId);
+            listOfPrices.RailPricePer1m = GetRailsPrice(railsId);
+            listOfPrices.RailsPrice = (2 * listOfPrices.RailPricePer1m * (decimal)1.06) * numOfPanels;
+            listOfPrices.MontagePrice = numOfPanels * 20;
+            return Ok(listOfPrices);
+        }
+
+
+
         private List<int> GetNumberOfRowsAndCols(int height, int width)
         {
             List<int> rowsAndCols = new List<int>();
@@ -82,6 +100,18 @@ namespace SolaRise_back.Controllers
                 return 1050;
             else
                 return 1075;
+        }
+
+        private decimal GetPanelPower(int panelId)
+        {
+            if (panelId == 0)
+                return 600;
+            else if (panelId == 1)
+                return 650;
+            else if (panelId == 2)
+                return 620;
+            else
+                return 700;
         }
 
         private decimal GetInverterPrice(int panelId)
