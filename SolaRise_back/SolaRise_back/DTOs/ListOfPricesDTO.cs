@@ -11,5 +11,7 @@
         public decimal RailsPrice { get; set; }
 
         public decimal MontagePrice { get; set; }
+
+        public decimal RailPricePer1m { get; set; }
     }
 }

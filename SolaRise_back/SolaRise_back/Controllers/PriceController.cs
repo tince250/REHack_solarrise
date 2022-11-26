@@ -13,8 +13,14 @@ namespace SolaRise_back.Controllers
         }
 
         [HttpGet]
-        [Route("getPrice/panel_id={panelId}&rails_id={railsId}&address={address}&longitude={longitude}&latitude={latitude}")]
-        public async Task<ActionResult<ListOfPricesDTO>> GetPrice(int panelId, int railsId, String address, decimal longitude, decimal latitude)
+        [Route("getFullPrice/panel_id={panelId}&rails_id={railsId}&address={address}&longitude={longitude}&latitude={latitude}")]
+        public async Task<ActionResult<ListOfPricesDTO>> GetPriceForFullRoof(int panelId, int railsId, String address, decimal longitude, decimal latitude)
+        {
+
+            return Ok(findListOfPricesForFullRoof(panelId, railsId, address, longitude, latitude));
+        }
+
+        private ListOfPricesDTO findListOfPricesForFullRoof(int panelId, int railsId, String address, decimal longitude, decimal latitude)
         {
             List<int> dimensions = GetDimensions(address, latitude, longitude);
             List<int> rowsAndCols = GetNumberOfRowsAndCols(dimensions[0], dimensions[1]);
@@ -23,7 +29,22 @@ namespace SolaRise_back.Controllers
             listOfPrices.PanelPrice = GetPanelPrice(panelId);
             listOfPrices.NumOfPanels = numOfPanels;
             listOfPrices.InverterPrice = GetInverterPrice(panelId);
-            listOfPrices.RailsPrice = (dimensions[1] - 40 ) * 2 * GetRailsPrice(railsId) * rowsAndCols[0];
+            listOfPrices.RailPricePer1m = GetRailsPrice(railsId);
+            listOfPrices.RailsPrice = (dimensions[1] - 40) * 2 * GetRailsPrice(railsId) * rowsAndCols[0] / 100;
+            listOfPrices.MontagePrice = numOfPanels * 20;
+            return listOfPrices;
+        }
+
+        [HttpGet]
+        [Route("getForPrice/panel_id={panelId}&rails_id={railsId}&address={address}&longitude={longitude}&latitude={latitude}&price={price}")]
+        public async Task<ActionResult<ListOfPricesDTO>> GetPriceForPrice(int panelId, int railsId, String address, decimal longitude, decimal latitude, decimal price)
+        {
+            ListOfPricesDTO listOfPrices = findListOfPricesForFullRoof(panelId, railsId, address, longitude, latitude);
+            price -= listOfPrices.InverterPrice;
+            decimal priceFor1Panel = listOfPrices.PanelPrice + 2 * listOfPrices.RailPricePer1m * (decimal) 1.06 + 20;
+            int numOfPanels = (int) (price / priceFor1Panel);
+            listOfPrices.NumOfPanels = numOfPanels;
+            listOfPrices.RailsPrice = (2 * listOfPrices.RailPricePer1m * (decimal)1.06) * numOfPanels;
             listOfPrices.MontagePrice = numOfPanels * 20;
             return Ok(listOfPrices);
         }
