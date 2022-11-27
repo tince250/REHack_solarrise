@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -8,30 +9,34 @@ body {
     width: 100%;
 }
 
-#blob_img {
-    margin-left: -30%;
-    margin-top: -20%;
-    height: 40%;
-    width: 75%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-}
 
 #nav {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0.8em;
-    font-size: 2em;
+    height: 50px;
+    font-size: 1.5em;
     color: white;
     text-align: center;
     color: black;
 }
 
+#nav img{
+    height: 2em;
+    font-size: 1.5em;
+    color: white;
+    color: black;
+}
+
+.moto_banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 7%;
+}
+
 .moto_text {
     position: relative;
-    margin-top: 10px;
+    margin-top: 20px;
     color: black;
-    font-size: 3em;
+    font-size: 2.5em;
     margin-top: 10%;
     margin-left: 2%;
 }
@@ -42,18 +47,20 @@ body {
 }
 
 .hp_card {
-    display: inline-block;
-    border: 5px solid #81b29a;
-    height: 300px;
-    width: 15%;
-    border-radius: 10%;
+    border: 4px solid #808080;
+    height: 250px;
+    width: 20%;
+    border-radius: 5%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.icon_holder {
-    height: 50%;
-    width: 50%;
-    font-size: 50px;
-}
 
 .greeny {
     color: #81b29a;
@@ -62,6 +69,20 @@ body {
 .white {
     color: white;
 }
+
+.card_button {
+    text-align: center;
+    display: inline-block;
+}
+
+.card_content {
+    text-align: center;
+}
+
+.green_button {
+    width: 70%;
+    height: 20%;
+    padding: 10px 15px;
 
 #tree_map_section{
     padding-top: 10%;
@@ -93,7 +114,154 @@ body {
     font-weight: bold;
     display: inline-block;
     margin: 0 auto;
-    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.text {
+    text-align: center;
+}
+
+.card_row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5%;
+}
+
+.icon_holder {
+    margin-bottom: 20px;
+}
+
+.not_easy_panel {
+    margin-top: 5%;
+    width: 100%;
+    height: 300px;
+    margin-right: 5%;
+}
+
+.not_easy {
+    float: right;
+}
+
+.make_it_easy {
+    margin-left: 5%;
+    width: 100%;
+    height: 300px;
+}
+
+li {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+ol {
+    margin-top: 1.5%;
+}
+
+ul {
+    margin-top: 2%;
+}
+
+.yellow {
+    color: #e1c35a;
+}
+
+.title {
+    font-size: 2em;
+    color: #81b29a;
+    font-weight: bold;
+    margin: 3% 0 0 0;
+}
+
+.list_elem {
+    font-weight: bold;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: #808080;
+}
+
+.map_image {
+    margin-top: 10px;
+    height: 550px;
+}
+
+.map_image img{
+    height: 600px;
+    float: right;
+}
+
+.moto_images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.house_image {
+    margin-top: 10px;
+    height: 550px;
+    margin-right: -10%;
+    margin-bottom: -10%;
+}
+
+.house_image img{
+    height: 500px;
+    float: right;
+}
+
+
+@media screen and (max-width: 800px) {
+    .hp_card {
+      width: 100%;
+      margin-top: 5%;
+    }
+
+    .title {
+        font-size: 1.5em;
+        color: #81b29a;
+        font-weight: bold;
+        margin: 3% 0 0 0;
+    }
+
+    .moto_banner {
+        display: block;
+    }
+
+    .map_image {
+        margin-top: -30px;
+        height: 450px;
+    }
+
+    .map_image img{
+        height: 450px;
+    }
+
+
+    .moto_text {
+        margin-top: 20%;
+        width: 100%;
+    }
+
+    .make_it_easy {
+        margin-top: 20px;
+        margin-bottom: 100px;
+        margin-left: 0;
+    }
+
+    #nav {
+        font-size: 1em;
+    }
+
+    .not_easy_panel {
+        margin-right: 0;
+    }
+
+    .moto_text {
+        font-size: 1.8em;
+    }
 }
 
 .small_title{
