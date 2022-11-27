@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/index_style.css" />
+    <link rel="stylesheet" href="../styles/calculator_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+    <title>Solarise</title>
+</head>
+
+<body>
+
+    <div id="nav">
+        <h2>Solarise</h2>
+    </div>
+
+    <div>
+        <div class="calculator-card">
+
+            <i class="fa fa-solid fa fa-map-marker greeny card_icon" style="font-size:55px;"></i>
+
+            <div class="text label-text">
+                <p>Find out how much do solar panel cost in your area</p>
+            </div>
+
+            <div>
+                <input id="address" placeholder="Example: Bulevar Despota Stefana 7"
+                    class="location input-location"></input>
+            </div>
+
+        </div>
+
+        <div class="middle-small-cards">
+            <a id="maxLink" class="calculator-card inline-cards" onclick="showMaxForm()" href="#forms">
+                <div class=".icon_holder">
+                    <i class="fa fa-solid fa fa-home greeny card_icon" style="font-size:55px;"></i>
+                </div>
+
+                <p>Cover whole roof</p>
+            </a>
+            <a id="budgetLink" class="calculator-card inline-cards" onclick="showBudgetForm()" href="#forms">
+                <div class=".icon_holder">
+                    <i class="fa fa-solid fa fa-dollar greeny card_icon" style="font-size:55px;"></i>
+                </div>
+                <p>Find best offers based on your total budget</p>
+            </a>
+            <a id="billLink" class="calculator-card inline-cards" onclick="showBillForm()" href="#forms">
+                <div class=".icon_holder">
+                    <i class="fa fa-solid fa fa-ticket greeny card_icon" style="font-size:55px;"></i>
+                </div>
+                <p>Estimate your consumption based on your electricity bill</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="container" id="forms">
+        <div id="form1" class="row hide">
+            <div id="choose-companies" class="col-sm-12 col-lg-6">
+                <p>Choose your prefered company:</p>
+                <select id="company-list1" class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">Luxor</option>
+                    <option value="2">Eco line</option>
+                    <option value="3">Flisom</option>
+                </select>
+                <button id="btn1" type="button" class="btn btn-success">Find a deal</button>
+
+            </div>
+            <div id="show-cost" class="col-sm-12 col-lg-6">
+                <p>All what you need is: </p>
+                <hr>
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Panels</div>
+                            Price for 1 panel: <span id="price-1-panel"></span>
+                        </div>
+                        <span id="number-of-panels" class="badge bg-primary rounded-pill"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Inverter</div>
+                            Price for 1 invereter: <span id="price-1-inverter"></span>
+                        </div>
+                        <span id="number-of-inverters" class="badge bg-primary rounded-pill"></span>
+                    </li>
+                    <li class="list-group-item">Rails: <span id="rails-price"></li>
+                    <li class="list-group-item">Montage: <span id="montage-price"></li>
+                </ol>
+                <p>Total fee is: <span id="total-fee"></span></p>
+
+            </div>
+        </div>
+
+        <div id="form2" class="row hide">
+            <div id="choose-companies" class="col-sm-12 col-lg-6">
+                <p>Choose your prefered company:</p>
+                <select id="company-list2" class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">Luxor</option>
+                    <option value="2">Eco line</option>
+                    <option value="3">Flisom</option>
+                </select>
+                <div class="mb-3 col-lg-3">
+                    <label for="priceInput" class="form-label">Your budget:</label>
+                    <input type="number" class="form-control" id="priceInput" placeholder="5000">
+                </div>
+                <button id="btn2" type="button" class="btn btn-success">Find a deal</button>
+
+            </div>
+            <div id="show-cost" class="col-sm-12 col-lg-6">
+                <p>All what you need is: </p>
+                <hr>
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Panels</div>
+                            Price for 1 panel: <span id="price-1-panel2"></span>
+                        </div>
+                        <span id="number-of-panels2" class="badge bg-primary rounded-pill"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Inverter</div>
+                            Price for 1 invereter: <span id="price-1-inverter2"></span>
+                        </div>
+                        <span id="number-of-inverters2" class="badge bg-primary rounded-pill"></span>
+                    </li>
+                    <li class="list-group-item">Rails: <span id="rails-price2"></li>
+                    <li class="list-group-item">Montage: <span id="montage-price2"></li>
+                </ol>
+                <p>Total fee is: <span id="total-fee2"></span></p>
+
+            </div>
+        </div>
+
+        <div id="form3" class="row hide">
+            <div id="choose-companies" class="col-sm-12 col-lg-6">
+                <p>Choose your prefered company:</p>
+                <select id="company-list3" class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">Luxor</option>
+                    <option value="2">Eco line</option>
+                    <option value="3">Flisom</option>
+                </select>
+                <div class="mb-3 col-lg-3">
+                    <label for="billInput" class="form-label">Your monthly bill:</label>
+                    <input type="number" class="form-control" id="billInput" placeholder="5000">
+                </div>
+                <button id="btn3" type="button" class="btn btn-success">Find a deal</button>
+
+            </div>
+            <div id="show-cost" class="col-sm-12 col-lg-6">
+                <p>All what you need is: </p>
+                <hr>
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Panels</div>
+                            Price for 1 panel: <span id="price-1-panel3"></span>
+                        </div>
+                        <span id="number-of-panels3" class="badge bg-primary rounded-pill"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Inverter</div>
+                            Price for 1 invereter: <span id="price-1-inverter3"></span>
+                        </div>
+                        <span id="number-of-inverters3" class="badge bg-primary rounded-pill"></span>
+                    </li>
+                    <li class="list-group-item">Rails: <span id="rails-price3"></li>
+                    <li class="list-group-item">Montage: <span id="montage-price3"></li>
+                </ol>
+                <p>Total fee is: <span id="total-fee3"></span></p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/forms.js"></script>
+
+
+</body>
+
+</html>

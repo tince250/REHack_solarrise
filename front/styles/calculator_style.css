@@ -1,0 +1,108 @@
+.container {
+    margin-top: 20em;
+    margin-bottom: 20em;
+}
+
+.container p {
+    margin: 20px !important;
+}
+
+.container #choose-companies p {
+    font-size: 1.5rem;
+}
+
+.container #show-cost p {
+    font-size: 1.5rem;
+}
+
+.hide {
+    display: none !important;
+}
+
+a {
+    all: unset;
+}
+
+.calculator-card {
+    width: 60%;
+    height: auto;
+    position: relative;
+    top: 8em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 0;
+    padding: 2em;
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.label-text {
+    font-size: calc(min(1.4em, 3vw));
+    font-weight: 100;
+    text-align: center;
+}
+
+.input-location {
+    width: calc(min(45vw, 20em));
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    margin: 1em 0em;
+    font-size: calc(min(1em, 2.5vw));
+    border: 0.1px solid grey;
+}
+
+.input-location:focus {
+    outline: 0.1px solid #81b29a;
+}
+
+
+.middle-small-cards {
+    width: 62%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.inline-cards {
+    position: relative;
+    width: 70%;
+    height: 9em;
+    margin-top: 20px;
+    cursor: pointer;
+    color: black;
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.inline-cards p {
+    margin-top: 20px;
+}
+
+
+.inline-cards:hover {
+    background-color: #81b29a;
+    color: white;
+    transition: transform .5s ease;
+}
+
+
+.inline-cards:hover i {
+    background-color: #81b29a;
+    color: white;
+}
+
+.btn {
+    background-color: #81b29a !important;
+    border: 0px !important;
+}
+
+
+@media (max-width: 800px) {
+    .middle-small-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
