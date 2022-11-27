@@ -1,5 +1,4 @@
 * {
-    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
@@ -83,6 +82,7 @@ body {
     width: 70%;
     height: 20%;
     padding: 10px 15px;
+}
 
 #tree_map_section{
     padding-top: 10%;
