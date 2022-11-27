@@ -19,7 +19,7 @@ body {
     color: black;
 }
 
-#nav img{
+#nav img {
     height: 2em;
     font-size: 1.5em;
     color: white;
@@ -84,263 +84,263 @@ body {
     height: 20%;
     padding: 10px 15px;
 
-#tree_map_section{
-    padding-top: 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    text-align: center;
-    width: 80%;
-    margin: auto;
-}
+    #tree_map_section {
+        padding-top: 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
 
-#tree_text_section{
-    order: 1;
-}
+    #tree_text_section {
+        order: 1;
+    }
 
-#tree_map{
-    height: 300px;
-    background-color: #81b29a;
-    order: 2;
-}
+    #tree_map {
+        height: 300px;
+        background-color: #81b29a;
+        order: 2;
+    }
 
-.green_button_large {
-    padding: 30px 60px;
-    background-color: #81b29a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: bold;
-    display: inline-block;
-    margin: 0 auto;
-    cursor: pointer;
-}
+    .green_button_large {
+        padding: 30px 60px;
+        background-color: #81b29a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        display: inline-block;
+        margin: 0 auto;
+        cursor: pointer;
+    }
 
-.text {
-    text-align: center;
-}
+    .text {
+        text-align: center;
+    }
 
-.card_row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 5%;
-}
+    .card_row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 5%;
+    }
 
-.icon_holder {
-    margin-bottom: 20px;
-}
+    .icon_holder {
+        margin-bottom: 20px;
+    }
 
-.not_easy_panel {
-    margin-top: 5%;
-    width: 100%;
-    height: 300px;
-    margin-right: 5%;
-}
+    .not_easy_panel {
+        margin-top: 5%;
+        width: 100%;
+        height: 300px;
+        margin-right: 5%;
+    }
 
-.not_easy {
-    float: right;
-}
+    .not_easy {
+        float: right;
+    }
 
-.make_it_easy {
-    margin-left: 5%;
-    width: 100%;
-    height: 300px;
-}
+    .make_it_easy {
+        margin-left: 5%;
+        width: 100%;
+        height: 300px;
+    }
 
-li {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+    li {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 
-ol {
-    margin-top: 1.5%;
-}
+    ol {
+        margin-top: 1.5%;
+    }
 
-ul {
-    margin-top: 2%;
-}
+    ul {
+        margin-top: 2%;
+    }
 
-.yellow {
-    color: #e1c35a;
-}
-
-.title {
-    font-size: 2em;
-    color: #81b29a;
-    font-weight: bold;
-    margin: 3% 0 0 0;
-}
-
-.list_elem {
-    font-weight: bold;
-}
-
-.subtitle {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-top: 5px;
-    color: #808080;
-}
-
-.map_image {
-    margin-top: 10px;
-    height: 550px;
-}
-
-.map_image img{
-    height: 600px;
-    float: right;
-}
-
-.moto_images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.house_image {
-    margin-top: 10px;
-    height: 550px;
-    margin-right: -10%;
-    margin-bottom: -10%;
-}
-
-.house_image img{
-    height: 500px;
-    float: right;
-}
-
-
-@media screen and (max-width: 800px) {
-    .hp_card {
-      width: 100%;
-      margin-top: 5%;
+    .yellow {
+        color: #e1c35a;
     }
 
     .title {
-        font-size: 1.5em;
+        font-size: 2em;
         color: #81b29a;
         font-weight: bold;
         margin: 3% 0 0 0;
     }
 
-    .moto_banner {
-        display: block;
+    .list_elem {
+        font-weight: bold;
+    }
+
+    .subtitle {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-top: 5px;
+        color: #808080;
     }
 
     .map_image {
-        margin-top: -30px;
-        height: 450px;
+        margin-top: 10px;
+        height: 550px;
     }
 
-    .map_image img{
-        height: 450px;
+    .map_image img {
+        height: 600px;
+        float: right;
+    }
+
+    .moto_images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .house_image {
+        margin-top: 10px;
+        height: 550px;
+        margin-right: -10%;
+        margin-bottom: -10%;
+    }
+
+    .house_image img {
+        height: 500px;
+        float: right;
     }
 
 
-    .moto_text {
-        margin-top: 20%;
+    @media screen and (max-width: 800px) {
+        .hp_card {
+            width: 100%;
+            margin-top: 5%;
+        }
+
+        .title {
+            font-size: 1.5em;
+            color: #81b29a;
+            font-weight: bold;
+            margin: 3% 0 0 0;
+        }
+
+        .moto_banner {
+            display: block;
+        }
+
+        .map_image {
+            margin-top: -30px;
+            height: 450px;
+        }
+
+        .map_image img {
+            height: 450px;
+        }
+
+
+        .moto_text {
+            margin-top: 20%;
+            width: 100%;
+        }
+
+        .make_it_easy {
+            margin-top: 20px;
+            margin-bottom: 100px;
+            margin-left: 0;
+        }
+
+        #nav {
+            font-size: 1em;
+        }
+
+        .not_easy_panel {
+            margin-right: 0;
+        }
+
+        .moto_text {
+            font-size: 1.8em;
+        }
+    }
+
+    .small_title {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #solar_potential {
+        padding-top: 5rem;
+    }
+
+
+    .stats {
+        width: 100%;
+        margin: auto;
+        padding: 2% 5%;
+    }
+
+    .stats_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 40px 0;
+    }
+
+    .stat_item {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+
+        margin: 0 auto;
+
+    }
+
+
+    .icon_container_wrap {
+        display: inline-block;
+        width: 60px;
+        margin-right: 10px;
+    }
+
+    .icon_container_wrap img {
         width: 100%;
     }
 
-    .make_it_easy {
-        margin-top: 20px;
-        margin-bottom: 100px;
-        margin-left: 0;
+    .icon_container {
+        width: 100%;
+        height: 100%;
     }
 
-    #nav {
-        font-size: 1em;
+    .stat_content {
+        display: inline-block;
+        font-size: 2.3rem;
+        margin: 0;
+        margin-bottom: -50px;
+        padding: 0;
+        transform: scale(1, 1.15);
+        font-weight: 400;
     }
 
-    .not_easy_panel {
-        margin-right: 0;
+    .stat_text {
+        font-size: 1.25rem;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
     }
 
-    .moto_text {
-        font-size: 1.8em;
+    .stat_card {
+        margin: 10px;
     }
-}
 
-.small_title{
-    margin: 0 auto;
-    text-align: center;
-}
+    @media screen and (max-width: 600px) {
+        #tree_map_section {
+            grid-template-columns: 1fr;
+            grid-column-gap: 100em;
+        }
 
-#solar_potential{
-    padding-top: 5rem;
-}
-
-
-.stats{
-    width: 100%;
-    margin: auto;
-    padding: 2% 5%;
-}
-
-.stats_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 40px 0;
-}
-
-.stat_item{
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    
-    margin: 0 auto;
-   
-}
-
-
-.icon_container_wrap{
-    display: inline-block;
-    width: 60px;
-    margin-right: 10px;
-}
-
-.icon_container_wrap img{
-    width: 100%;
-}
-
-.icon_container{
-    width: 100%;
-    height: 100%;
-}
-
-.stat_content{
-    display: inline-block;
-    font-size: 2.3rem;
-    margin: 0;
-    margin-bottom: -50px;
-    padding: 0;
-    transform: scale(1, 1.15);
-    font-weight: 400;
-}
-
-.stat_text{
-    font-size: 1.25rem;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-}
-
-.stat_card{
-    margin: 10px;
-}
-
-@media screen and (max-width: 600px) {
-    #tree_map_section{
-        grid-template-columns: 1fr;
-        grid-column-gap: 100em;
+        .stats_container {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 40px 0;
+        }
     }
-    .stats_container{
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 40px 0;
-    }
-}
-
