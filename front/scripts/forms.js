@@ -46,12 +46,14 @@ function showMaxForm() {
 }
 
 function showBudgetForm() {
+    getDimensions()
     maxLink.classList.add("hide");
     budgetLink.classList.remove("hide");
     billLink.classList.add("hide");
 }
 
 function showBillForm() {
+    getDimensions()
     maxLink.classList.add("hide");
     budgetLink.classList.add("hide");
     billLink.classList.remove("hide");
@@ -83,7 +85,6 @@ sumbitBtn2.addEventListener('click', () => {
     console.log(panelId.value)
     let price = document.getElementById("priceInput").value
     console.log(price)
-    getDimensions()
     let getRequest = new XMLHttpRequest();
     getRequest.open('GET', getForPrice.concat("panel_id=").concat(panelId2.value).concat("&rails_id=").concat(panelId2.value).concat("&height=").concat(height).concat("&width=").concat(width).concat("&price=").concat(price));
     getRequest.onreadystatechange = function () {
@@ -106,7 +107,6 @@ sumbitBtn3.addEventListener('click', () => {
     console.log(panelId2.value)
     let bill = document.getElementById("billInput").value
     console.log(bill)
-    getDimensions()
     let getRequest = new XMLHttpRequest();
     getRequest.open('GET', getForBill.concat("panel_id=").concat(panelId3.value).concat("&rails_id=").concat(panelId3.value).concat("&bill=").concat(bill));
     getRequest.onreadystatechange = function () {
