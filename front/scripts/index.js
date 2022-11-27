@@ -1,7 +1,7 @@
 function openCalculator() {
-    window.location.replace("../pages/calculator.html");
+    location.href = "pages/calculator.html";
 }
 
 function openTree() {
-    window.location.replace("../pages/tree_page.html");
+    location.href = "pages/tree_page.html";
 }
