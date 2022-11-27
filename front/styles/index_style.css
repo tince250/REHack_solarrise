@@ -61,3 +61,7 @@ body {
 .white {
     color: white;
 }
+
+.positive_button {
+    padding: 10px 15px;
+}
