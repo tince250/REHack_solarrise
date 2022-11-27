@@ -46,7 +46,6 @@ body {
 }
 
 .hp_card {
-    border: 4px solid #808080;
     height: 250px;
     width: 20%;
     border-radius: 5%;
@@ -58,6 +57,7 @@ body {
     font-size: 0.9em;
     padding-left: 10px;
     padding-right: 10px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -94,23 +94,27 @@ body {
 }
 
 #tree_map_section{
-    padding-top: 10%;
+    padding-top: 3%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 5rem;
     text-align: center;
     width: 80%;
     margin: auto;
 }
 
 #tree_text_section{
+    text-align: center;
     order: 1;
 }
 
 #tree_map{
-    height: 300px;
-    background-color: #81b29a;
+    height: 450px;
     order: 2;
+}
+
+#tree_map img{
+    height: 450px;
 }
 
 .green_button_large {
@@ -254,6 +258,10 @@ ul {
         width: 100%;
     }
 
+    .exclude_margin {
+        margin-left: 0;
+    }
+
     .make_it_easy {
         margin-top: 20px;
         margin-bottom: 100px;
@@ -341,10 +349,11 @@ ul {
     margin: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     #tree_map_section{
         grid-template-columns: 1fr;
         grid-column-gap: 100em;
+        width: 100%;
     }
     .stats_container{
         display: grid;
