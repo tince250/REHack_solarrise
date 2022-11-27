@@ -1,3 +1,24 @@
+.container {
+    margin-top: 20em;
+    margin-bottom: 20em;
+}
+
+.container p {
+    margin: 20px !important;
+}
+
+.container #choose-companies p {
+    font-size: 1.5rem;
+}
+
+.container #show-cost p {
+    font-size: 1.5rem;
+}
+
+.hide {
+    display: none !important;
+}
+
 a {
     all: unset;
 }
@@ -6,7 +27,7 @@ a {
     width: 60%;
     height: auto;
     position: relative;
-    top: 6em;
+    top: 8em;
     left: 50%;
     transform: translate(-50%, 0);
     border-radius: 0;
@@ -24,7 +45,7 @@ a {
 }
 
 .input-location {
-    width: calc(min(50vw, 20em));
+    width: calc(min(45vw, 20em));
     border-radius: 5px;
     padding: 0.5em 1em;
     margin: 1em 0em;
@@ -38,7 +59,7 @@ a {
 
 
 .middle-small-cards {
-    width: 65%;
+    width: 62%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -47,9 +68,17 @@ a {
 .inline-cards {
     position: relative;
     width: 70%;
-    height: 7.5em;
+    height: 9em;
     margin-top: 20px;
     cursor: pointer;
+    color: black;
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.inline-cards p {
+    margin-top: 20px;
 }
 
 
@@ -65,9 +94,9 @@ a {
     color: white;
 }
 
-.inline-cards>a {
-    display: table-cell;
-    vertical-align: middle;
+.btn {
+    background-color: #81b29a !important;
+    border: 0px !important;
 }
 
 
