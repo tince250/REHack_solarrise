@@ -46,7 +46,6 @@ body {
 }
 
 .hp_card {
-    border: 4px solid #808080;
     height: 250px;
     width: 20%;
     border-radius: 5%;
@@ -58,6 +57,7 @@ body {
     font-size: 0.9em;
     padding-left: 10px;
     padding-right: 10px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -93,6 +93,80 @@ body {
     cursor: pointer;
 }
 
+#tree_map_section{
+    padding-top: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+#tree_text_section{
+    text-align: center;
+    order: 1;
+}
+
+#tree_map{
+    height: 450px;
+    order: 2;
+}
+
+#tree_map img{
+    height: 450px;
+}
+
+.green_button_large {
+    padding: 30px 60px;
+    background-color: #81b29a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.text {
+    text-align: center;
+}
+
+.card_row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5%;
+}
+
+.icon_holder {
+    margin-bottom: 20px;
+}
+
+.not_easy_panel {
+    margin-top: 5%;
+    width: 100%;
+    height: 300px;
+    margin-right: 5%;
+}
+
+.not_easy {
+    float: right;
+}
+
+.make_it_easy {
+    margin-left: 5%;
+    width: 100%;
+    height: 300px;
+}
+
+li {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
     #tree_map_section {
         padding-top: 10%;
         display: grid;
@@ -204,6 +278,15 @@ body {
         float: right;
     }
 
+    .exclude_margin {
+        margin-left: 0;
+    }
+
+    .make_it_easy {
+        margin-top: 20px;
+        margin-bottom: 100px;
+        margin-left: 0;
+    }
     .moto_images {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -282,7 +365,12 @@ body {
         padding-top: 5rem;
     }
 
-
+@media screen and (max-width: 800px) {
+    #tree_map_section{
+        grid-template-columns: 1fr;
+        grid-column-gap: 100em;
+        width: 100%;
+    }
     .stats {
         width: 100%;
         margin: auto;
