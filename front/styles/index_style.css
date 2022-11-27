@@ -11,8 +11,7 @@ body {
 
 #nav {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: 50px;
     font-size: 1.5em;
     color: white;
     text-align: center;
@@ -21,10 +20,8 @@ body {
 
 #nav img{
     height: 2em;
-    position: absolute;
     font-size: 1.5em;
     color: white;
-    text-align: center;
     color: black;
 }
 
@@ -116,6 +113,7 @@ body {
     margin-top: 5%;
     width: 100%;
     height: 300px;
+    margin-right: 5%;
 }
 
 .not_easy {
@@ -123,7 +121,7 @@ body {
 }
 
 .make_it_easy {
-    
+    margin-left: 5%;
     width: 100%;
     height: 300px;
 }
@@ -226,10 +224,15 @@ ul {
     .make_it_easy {
         margin-top: 20px;
         margin-bottom: 100px;
+        margin-left: 0;
     }
 
     #nav {
         font-size: 1em;
+    }
+
+    .not_easy_panel {
+        margin-right: 0;
     }
 
     .moto_text {
